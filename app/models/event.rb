@@ -15,10 +15,11 @@ class Event < ApplicationRecord
 	validates :location, presence: true
 	
 	validates_each :duration do |record, attr, value|
-    record.errors.add(attr, 'must modulo 5') if value % 5 != 0
     record.errors.add(attr, 'must exist') if value == nil
+    if value != nil
+    	record.errors.add(attr, 'must modulo 5') if value % 5 != 0
+  	end
   end
-
 
 
 
