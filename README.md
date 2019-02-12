@@ -9,7 +9,7 @@ $ rails db:create
 $ rails db:migrate
 $ rails db:seed
 ```
-La boîte se trouve par ici : http://www.yopmail.com/test_user_mailer
+La boîte mail se trouve par ici : http://www.yopmail.com/test_user_mailer
 
 Commandes pour test l'envoi des mails : 
 ```shell
