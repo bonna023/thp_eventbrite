@@ -1,5 +1,5 @@
 # EVENTBRITE PROJECT
-> Author : @Jérémy B.
+> Slack : @Jérémy B.
 
 ## Corretion
 
