@@ -1,8 +1,8 @@
 class Event < ApplicationRecord
 
-	belongs_to :user
+	belongs_to :admin, :foreign_key => :admin_id, class_name: 'User'
 	has_many :attendances
-	has_many :users, through: :attendances
+	has_many :attendees, class_name: 'User', through: :attendances
 
 	validates_each :start_date do |record, attr, value|
     record.errors.add(attr, 'must exist') if value == nil
@@ -20,7 +20,5 @@ class Event < ApplicationRecord
     	record.errors.add(attr, 'must modulo 5') if value % 5 != 0
   	end
   end
-
-
 
 end
